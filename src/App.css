@@ -1,0 +1,44 @@
+
+
+
+@import "tailwindcss";
+
+
+
+
+/* Glowing animated border */
+.glow-border {
+  position: relative;
+  border-radius: 20px; /* adjust as needed */
+  border: 2px solid black;
+  background-clip: padding-box;
+  z-index: 0;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; bottom: -2px; right: -2px; /* border thickness */
+  border-radius: 22px; /* slightly larger than parent */
+  background: linear-gradient(270deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 600% 600%;
+  z-index: -1;
+  filter: blur(10px);
+  animation: glow-animation 5s linear infinite;
+}
+
+@keyframes glow-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.trap{
+  mix-blend-mode: multiply;
+
+}
+
+
+
+
+
