@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import MessageList from "./MessageList";
 import Chatheader from "./Chatheader";
-import ChatInput from "./Chatinput";
+import ChatInput from "./ChatInput";
 
 const ChatBot = () => {
   const [messages, setMessages] = useState([]);
